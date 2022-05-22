@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using static Exceptions_final.MyOwnException;
 
 namespace Exceptions_final
 {
@@ -20,7 +21,7 @@ namespace Exceptions_final
                 {
                     throw ex;
                 }
-                catch (Exception e) when (e is MyException)
+                catch (Exception e) when (e is MyOwnException)
                 {
                     Console.WriteLine(e.Message);
                 }
@@ -40,7 +41,7 @@ namespace Exceptions_final
                 {
                     Console.WriteLine(e.Message);
                 }
-                Console.WriteLine("Enter, чтобы продолжить");
+                Console.WriteLine("Enter, чтобы продолжить!");
                 continue;
             }
         }
